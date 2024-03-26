@@ -1,18 +1,18 @@
-import Table from '@/Components/Table';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
+import Table from "@/Components/Table.jsx";
 
 const columns = [
     'size',
-    'crust',
     'chef',
-    'status',
+    'status'
 ];
+
 export default function All({ auth, pizzas }) {
     return (
         <AuthenticatedLayout
             user={auth.user}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}
+            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Pizzas</h2>}
         >
             <Head title="All Pizzas" />
 
@@ -23,5 +23,6 @@ export default function All({ auth, pizzas }) {
                     </div>
                 </div>
             </div>
-        </AuthenticatedLayout>);
+        </AuthenticatedLayout>
+    );
 }

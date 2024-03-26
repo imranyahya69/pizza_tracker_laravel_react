@@ -10,14 +10,13 @@ class Pizza extends Model
     use HasFactory;
 
     protected $gaurded = [];
-
+    protected $appends = [
+        'chef'
+    ];
     protected $casts = [
         'toppings' => 'array',
     ];
 
-    protected $appends = [
-        'chef'
-    ];
 
     protected $hidden = [
         'user'
